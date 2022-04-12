@@ -824,6 +824,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .top-1\/4 {
   top: 25%;
 }
+.float-left {
+  float: left;
+}
 .m-auto {
   margin: auto;
 }
@@ -858,6 +861,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-2 {
   margin-top: 0.5rem;
 }
+.box-content {
+  box-sizing: content-box;
+}
 .block {
   display: block;
 }
@@ -879,6 +885,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-56 {
   height: 14rem;
 }
+.max-h-60 {
+  max-height: 15rem;
+}
 .max-h-56 {
   max-height: 14rem;
 }
@@ -888,6 +897,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-4\/5 {
   width: 80%;
 }
+.max-w-xl {
+  max-width: 36rem;
+}
+.max-w-lg {
+  max-width: 32rem;
+}
 .max-w-sm {
   max-width: 24rem;
 }
@@ -896,6 +911,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.list-none {
+  list-style-type: none;
 }
 .flex-row {
   flex-direction: row;
@@ -944,6 +962,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .p-4 {
   padding: 1rem;
 }
@@ -973,8 +995,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pb-4 {
   padding-bottom: 1rem;
 }
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+.pt-7 {
+  padding-top: 1.75rem;
+}
+.pb-12 {
+  padding-bottom: 3rem;
+}
 .pb-1 {
   padding-bottom: 0.25rem;
+}
+.pl-2 {
+  padding-left: 0.5rem;
 }
 .pb-8 {
   padding-bottom: 2rem;
@@ -989,6 +1023,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -996,6 +1034,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .text-gray-500 {
   --tw-text-opacity: 1;

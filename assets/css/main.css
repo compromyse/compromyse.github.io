@@ -885,9 +885,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-56 {
   height: 14rem;
 }
-.max-h-60 {
-  max-height: 15rem;
-}
 .max-h-56 {
   max-height: 14rem;
 }
@@ -896,6 +893,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-4\/5 {
   width: 80%;
+}
+.max-w-md {
+  max-width: 28rem;
 }
 .max-w-xl {
   max-width: 36rem;

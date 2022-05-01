@@ -13,6 +13,17 @@
   
     {
 
+      "title"    : "NahamCon CTF 2022 &gt; Cereal",
+      "url"      : "/blog/2022/nahamcon-cereal",
+      "category" : "writeup",
+      "tags"     : "nahamcon,cereal,ctf,lolpython",
+      "date"     : "01 May 2022",
+      "discription" : "Writeup For The Cereal Challenge In NahamCon CTF 2022"
+
+    } ,
+  
+    {
+
       "title"    : "Hello World",
       "url"      : "/blog/2022/hello-world",
       "category" : "h3ll0w0r1d",

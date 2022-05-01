@@ -2,6 +2,17 @@
   
     {
 
+      "title"    : "NahamCon CTF 2022 &gt; LOLD",
+      "url"      : "/blog/2022/nahamcon-lold",
+      "category" : "writeup",
+      "tags"     : "nahamcon,lold,ctf,lolpython",
+      "date"     : "01 May 2022",
+      "discription" : "Writeup For The LOLD Challenge In NahamCon CTF 2022"
+
+    } ,
+  
+    {
+
       "title"    : "Hello World",
       "url"      : "/blog/2022/hello-world",
       "category" : "h3ll0w0r1d",

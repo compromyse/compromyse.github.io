@@ -894,6 +894,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-4\/5 {
   width: 80%;
 }
+.max-w-xs {
+  max-width: 20rem;
+}
 .max-w-sm {
   max-width: 24rem;
 }

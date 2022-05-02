@@ -2,6 +2,17 @@
   
     {
 
+      "title"    : "NahamCon CTF 2022 &gt; A Wild Ride",
+      "url"      : "/blog/2022/nahamcon-a-wild-ride",
+      "category" : "writeup",
+      "tags"     : "nahamcon,awildride,ride,wild,ctf,gpx,gps,global",
+      "date"     : "02 May 2022",
+      "discription" : "Writeup For The &quot;A Wild Ride&quot; Challenge In NahamCon CTF 2022"
+
+    } ,
+  
+    {
+
       "title"    : "NahamCon CTF 2022 &gt; LOLD",
       "url"      : "/blog/2022/nahamcon-lold",
       "category" : "writeup",

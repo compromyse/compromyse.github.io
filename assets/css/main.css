@@ -870,9 +870,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex {
   display: flex;
 }
-.table {
-  display: table;
-}
 .hidden {
   display: none;
 }

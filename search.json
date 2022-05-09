@@ -2,6 +2,17 @@
   
     {
 
+      "title"    : "Reversing IOT Firmware",
+      "url"      : "/blog/2022/reversing-firmware",
+      "category" : "reversing",
+      "tags"     : "reverseengineering,, reversing,, reverse,, iot,, firmware,, device",
+      "date"     : "08 May 2022",
+      "discription" : "Ever wondered how you could reverse IOT Firmware To Get To A Linux Filesystem?"
+
+    } ,
+  
+    {
+
       "title"    : "NahamCon CTF 2022 &gt; A Wild Ride",
       "url"      : "/blog/2022/nahamcon-a-wild-ride",
       "category" : "writeup",

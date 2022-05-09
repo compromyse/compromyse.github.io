@@ -242,7 +242,7 @@ JPG file magic bytes
 JPG file data
 </code></pre></div></div>
 
-<p>This is essentially hiding/embedding the <code class="language-plaintext highlighter-rouge">.jpg</code> file in the png file. This is pretty common in <code class="language-plaintext highlighter-rouge">steganography</code></p>
+<p>This is essentially hiding/embedding the <code class="language-plaintext highlighter-rouge">.jpg</code> file in the png file. This is pretty common in <code class="language-plaintext highlighter-rouge">steganography</code>.</p>
 
 <p>Moving back to the firmware file, we can use <code class="language-plaintext highlighter-rouge">binwalk</code> to find the file structure. Running <code class="language-plaintext highlighter-rouge">binwalk WN3000RPv2-V1.0.0.92.img</code> will give us this output:</p>
 
@@ -280,22 +280,26 @@ JPG file data
 </code></pre></div></div>
 
 <p>We can extract the <code class="language-plaintext highlighter-rouge">Squashfs filesystem</code> with</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dd </span><span class="k">if</span><span class="o">=</span>WN3000RPv2-V1.0.0.92.img <span class="nv">skip</span><span class="o">=</span>983168 <span class="nv">of</span><span class="o">=</span>filesystem.squashfs <span class="nv">bs</span><span class="o">=</span>1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dd </span><span class="k">if</span><span class="o">=</span>WN3000RPv2-V1.0.0.92.img <span class="nv">skip</span><span class="o">=</span>983168 <span class="nv">of</span><span class="o">=</span>filesystem.squashfs <span class="nv">bs</span><span class="o">=</span>131072 <span class="nv">count</span><span class="o">=</span>1 <span class="nv">iflag</span><span class="o">=</span>skip_bytes
 </code></pre></div></div>
 
-<p>We will have to replace <code class="language-plaintext highlighter-rouge">skip</code> with <code class="language-plaintext highlighter-rouge">DECIMAL</code> from the binwalk command. In this case, <code class="language-plaintext highlighter-rouge">983168</code> since the decimal value in the binwalk command is <code class="language-plaintext highlighter-rouge">983168</code></p>
+<p>We will have to replace <code class="language-plaintext highlighter-rouge">skip</code> with <code class="language-plaintext highlighter-rouge">DECIMAL</code> and <code class="language-plaintext highlighter-rouge">bs</code> with <code class="language-plaintext highlighter-rouge">blocksize</code> from the binwalk command. In this case, we replace <code class="language-plaintext highlighter-rouge">skip</code> with <code class="language-plaintext highlighter-rouge">983168</code> since the decimal value in the binwalk command is <code class="language-plaintext highlighter-rouge">983168</code> and <code class="language-plaintext highlighter-rouge">bs</code> with <code class="language-plaintext highlighter-rouge">131072</code> since blocksize is <code class="language-plaintext highlighter-rouge">bs=131072</code> from binwalk.</p>
 
 <p>Here are the parts of the command</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>------------------------------
-if   | input file
-------------------------------
-of   | output file
-------------------------------
-skip | number of bytes to skip
-------------------------------
-bs   | block size
-------------------------------
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|---------------------------------------------|
+| if         | input file                     |
+|---------------------------------------------|
+| of         | output file                    |
+|---------------------------------------------|
+| skip       | number of bytes to skip        |
+|---------------------------------------------|
+| bs         | block size                     |
+|---------------------------------------------|
+| count      | set number of blocks to copy   |
+|---------------------------------------------|
+| skip_bytes | force skip to not consider bs  |
+|---------------------------------------------|
 </code></pre></div></div>
 
 <p>This will create <code class="language-plaintext highlighter-rouge">filesystem.squashfs</code> in the current directory. When we run <code class="language-plaintext highlighter-rouge">file filesystem.squashfs</code> we can see that the output tells us it’s a squashfs filesystem.</p>

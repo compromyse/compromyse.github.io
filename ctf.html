@@ -18,7 +18,7 @@
     document.getElementById("mySidenav").style.width = "0";
   }
   </script>
-  <body style="background-color: #0f0e12;">
+  <body style="background-color: #0f0f12;">
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
     <div class = flex><nav class="bg-background navbar hidden 
             relative md:flex w-full flex-row items-center 
@@ -27,19 +27,19 @@
     <div class="ml-2 flex flex-grow flex-row">
       <a href="/" class="ml-2 rounded font-mono text-xl
       text-white transition-all px-2 pt-1 pb-0
-      hover:bg-gray-700">~/compromyse</a>
+      hover:bg-gray-800">~/compromyse</a>
   
       <a href="/blog" class="ml-3 rounded font-mono px-2
       transition-all pt-1 pb-0
-      hover:bg-gray-700">/dev/blog</a>
+      hover:bg-gray-800">/dev/blog</a>
   
       <a href="/about" class="ml-3 rounded font-mono px-2
-      transition-all hover:bg-gray-700 pt-1 pb-0">/usr/about</a>
+      transition-all hover:bg-gray-800 pt-1 pb-0">/usr/about</a>
   
       <a href="/ctf" class="ml-3 rounded font-mono px-2
-      transition-all hover:bg-gray-700 pt-1 pb-0">/bin/ctf</a>
+      transition-all hover:bg-gray-800 pt-1 pb-0">/bin/ctf</a>
   
-      <i class="fa fa-search ml-auto mr-5 rounded hover:bg-gray-700
+      <i class="fa fa-search ml-auto mr-5 rounded hover:bg-gray-800
                 px-2 pt-2" style="cursor: pointer;" onclick="openSearch();"></i>
     </div>
 </nav>
@@ -160,6 +160,37 @@ var MD5 = function(d){var r = M(V(Y(X(d),8*d.length)));return r.toLowerCase()};f
     
     <div class="blog-block flex-col break-words transform hover:bg-gray-900
                 justify-start max-w-sm" style="cursor: pointer;">
+        <a class="text-xl text-white mt-2 border-b pb-1 hover:underline">DaaS</a>
+        <a class="text-lg text-gray-400 pt-2">Change the bridged adapter in virtualbox to the correct one. Debug user's credentials (for getting IP address) &gt; debug:debug</a>
+        <div>
+          
+            <a class="text-gray-400 pt-1">ctf</a>
+          
+            <a class="text-gray-400 pt-1">docker</a>
+          
+            <a class="text-gray-400 pt-1">saas</a>
+          
+            <a class="text-gray-400 pt-1">service</a>
+          
+        </div>
+        <a class="text-lg text-gray-400 pt-2 hover:underline" href="https://github.com/compromyse/DaaS/releases/download/V1.1/Daas.7z">Download</a>
+        <a class="text-lg text-gray-400 pt-2 hover:underline" onclick="submitFlag1()">Submit Flag</a>
+    </div>
+  <script>
+      function submitFlag1() {
+        let text;
+        let flag = prompt("Enter The Flag >");
+        if (MD5(flag) == "1359245f77b64f98cc56aa6531d7bcd0" || MD5(flag) == "51c37947db766e4eb3467e9dc9ca858e") {
+          text = "Correct Flag!";
+        } else {
+          text = "Wrong Flag :(";
+        }
+        alert(text)
+      }
+    </script>
+  
+    <div class="blog-block flex-col break-words transform hover:bg-gray-900
+                justify-start max-w-sm" style="cursor: pointer;">
         <a class="text-xl text-white mt-2 border-b pb-1 hover:underline">M4rk</a>
         <a class="text-lg text-gray-400 pt-2">Change the bridged adapter in virtualbox to the correct one. Debug user's credentials (for getting IP address) &gt; debug:debug</a>
         <div>
@@ -170,10 +201,10 @@ var MD5 = function(d){var r = M(V(Y(X(d),8*d.length)));return r.toLowerCase()};f
           
         </div>
         <a class="text-lg text-gray-400 pt-2 hover:underline" href="https://github.com/compromyse/m4rk/releases/download/m4rk/m4rk.7z">Download</a>
-        <a class="text-lg text-gray-400 pt-2 hover:underline" onclick="submitFlag()">Submit Flag</a>
+        <a class="text-lg text-gray-400 pt-2 hover:underline" onclick="submitFlag2()">Submit Flag</a>
     </div>
   <script>
-      function submitFlag() {
+      function submitFlag2() {
         let text;
         let flag = prompt("Enter The Flag >");
         if (MD5(flag) == "de8e93cc31a7cc2a04ea8ed1d89958fb" || MD5(flag) == "c357aadcdf0e74ccc290be7a444e7035") {

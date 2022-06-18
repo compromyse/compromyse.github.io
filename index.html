@@ -18,7 +18,7 @@
     document.getElementById("mySidenav").style.width = "0";
   }
   </script>
-  <body style="background-color: #0f0e12;">
+  <body style="background-color: #0f0f12;">
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
     <div class = flex><nav class="bg-background navbar hidden 
             relative md:flex w-full flex-row items-center 
@@ -27,19 +27,19 @@
     <div class="ml-2 flex flex-grow flex-row">
       <a href="/" class="ml-2 rounded font-mono text-xl
       text-white transition-all px-2 pt-1 pb-0
-      hover:bg-gray-700">~/compromyse</a>
+      hover:bg-gray-800">~/compromyse</a>
   
       <a href="/blog" class="ml-3 rounded font-mono px-2
       transition-all pt-1 pb-0
-      hover:bg-gray-700">/dev/blog</a>
+      hover:bg-gray-800">/dev/blog</a>
   
       <a href="/about" class="ml-3 rounded font-mono px-2
-      transition-all hover:bg-gray-700 pt-1 pb-0">/usr/about</a>
+      transition-all hover:bg-gray-800 pt-1 pb-0">/usr/about</a>
   
       <a href="/ctf" class="ml-3 rounded font-mono px-2
-      transition-all hover:bg-gray-700 pt-1 pb-0">/bin/ctf</a>
+      transition-all hover:bg-gray-800 pt-1 pb-0">/bin/ctf</a>
   
-      <i class="fa fa-search ml-auto mr-5 rounded hover:bg-gray-700
+      <i class="fa fa-search ml-auto mr-5 rounded hover:bg-gray-800
                 px-2 pt-2" style="cursor: pointer;" onclick="openSearch();"></i>
     </div>
 </nav>
@@ -152,12 +152,14 @@ body {
     </div>
 </nav></div>
     <div class="mb-12">
-    <div class="flex flex-col items-center justify-center transform flex-wrap"
-    style="background: url(/assets/img/backdrop.jpg);background-position: center center;
-            background-repeat: no-repeat;background-size: 100%; height: 100vh;">
+    <div id="particles-js"></div>
+<div class="flex flex-col items-center justify-center transform flex-wrap"
+    style="height: 100vh;">
     <img src="/assets/img/author.png" class="rounded-full h-56 mt-4">
-    <div id="app" class="text-white text-xl m-4 bg-gray-900 rounded p-2"></div>
+    <div id="app" class="text-white text-xl m-4 bg-zinc-900 rounded p-2"></div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <script>
 var app = document.getElementById('app');
@@ -172,6 +174,116 @@ typewriter.typeString('Hi, I\'m Raghu!')
   .typeString('C0mpr0mys3!')
   .pauseFor(3500)
   .start();
+  particlesJS("particles-js", {
+    "particles": {
+        "number": {
+            "value": 80,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#ffffff"
+        },
+        "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 5
+            },
+            "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+            }
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 400,
+                "line_linked": {
+                    "opacity": 1
+                }
+            },
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 200,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+        }
+    },
+    "retina_detect": true
+});
 </script>
 
 <style>
@@ -213,6 +325,25 @@ typewriter.typeString('Hi, I\'m Raghu!')
   to {
     border-right-color: transparent;
   }
+}
+#particles-js canvas {
+    display: block;
+    vertical-align: bottom;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0
 }
 </style>
 

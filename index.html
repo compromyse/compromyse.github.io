@@ -18,14 +18,14 @@
 <meta property="og:title" content="Home" />
 <meta name="author" content="c0mpr0mys3" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="/" />
-<meta property="og:url" content="/" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="c0mpr0mys3" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Home" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"c0mpr0mys3"},"headline":"Home","name":"c0mpr0mys3","url":"/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"c0mpr0mys3"},"headline":"Home","name":"c0mpr0mys3","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -172,7 +172,7 @@ body {
     </div>
 </nav></div>
     <div class="mb-12">
-    <div id="particles-js"></div>
+    <div id="backgroundjs"></div>
 <div class="flex flex-col items-center justify-center transform flex-wrap"
     style="height: 100vh;">
     <img src="/assets/img/author.png" class="rounded-full h-56 mt-4" alt="author">
@@ -194,116 +194,6 @@ typewriter.typeString('Hi, I\'m Raghu!')
   .typeString('C0mpr0mys3!')
   .pauseFor(3500)
   .start();
-  particlesJS("particles-js", {
-    "particles": {
-        "number": {
-            "value": 80,
-            "density": {
-                "enable": true,
-                "value_area": 800
-            }
-        },
-        "color": {
-            "value": "#ffffff"
-        },
-        "shape": {
-            "type": "circle",
-            "stroke": {
-                "width": 0,
-                "color": "#000000"
-            },
-            "polygon": {
-                "nb_sides": 5
-            },
-            "image": {
-                "src": "img/github.svg",
-                "width": 100,
-                "height": 100
-            }
-        },
-        "opacity": {
-            "value": 0.5,
-            "random": false,
-            "anim": {
-                "enable": false,
-                "speed": 1,
-                "opacity_min": 0.1,
-                "sync": false
-            }
-        },
-        "size": {
-            "value": 3,
-            "random": true,
-            "anim": {
-                "enable": false,
-                "speed": 40,
-                "size_min": 0.1,
-                "sync": false
-            }
-        },
-        "line_linked": {
-            "enable": true,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-        },
-        "move": {
-            "enable": true,
-            "speed": 6,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-            }
-        }
-    },
-    "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-            "onhover": {
-                "enable": true,
-                "mode": "repulse"
-            },
-            "onclick": {
-                "enable": true,
-                "mode": "push"
-            },
-            "resize": true
-        },
-        "modes": {
-            "grab": {
-                "distance": 400,
-                "line_linked": {
-                    "opacity": 1
-                }
-            },
-            "bubble": {
-                "distance": 400,
-                "size": 40,
-                "duration": 2,
-                "opacity": 8,
-                "speed": 3
-            },
-            "repulse": {
-                "distance": 200,
-                "duration": 0.4
-            },
-            "push": {
-                "particles_nb": 4
-            },
-            "remove": {
-                "particles_nb": 2
-            }
-        }
-    },
-    "retina_detect": true
-});
 </script>
 
 <style>
@@ -346,18 +236,8 @@ typewriter.typeString('Hi, I\'m Raghu!')
     border-right-color: transparent;
   }
 }
-#particles-js canvas {
-    display: block;
-    vertical-align: bottom;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
-    transition: opacity .8s ease, transform 1.4s ease
-}
 
-#particles-js {
+#backgroundjs {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -367,6 +247,10 @@ typewriter.typeString('Hi, I\'m Raghu!')
 }
 </style>
 
+<script src="/assets/js/jquery.particleground.min.js"></script>
+<script>
+    particleground(document.getElementById('backgroundjs'))
+</script>
     </div><footer class="absolute bottom-0 w-full h-auto p-4 shadow 
     flex items-center justify-center md:p-6 bg-background
     overflow-hidden left-0 pt-3">

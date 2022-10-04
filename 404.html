@@ -18,14 +18,14 @@
 <meta property="og:title" content="404" />
 <meta name="author" content="c0mpr0mys3" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="/404" />
-<meta property="og:url" content="/404" />
+<link rel="canonical" href="http://localhost:4000/404" />
+<meta property="og:url" content="http://localhost:4000/404" />
 <meta property="og:site_name" content="c0mpr0mys3" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="404" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"c0mpr0mys3"},"headline":"404","url":"/404"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"c0mpr0mys3"},"headline":"404","url":"http://localhost:4000/404"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -172,7 +172,8 @@ body {
     </div>
 </nav></div>
     <div class="mb-12">
-    <div id="main">
+    <div id="backgroundjs"></div>
+<div id="main">
   <div class="fof">
         <h1>Error 404</h1>
         <p>Page not found :(</p>
@@ -213,8 +214,20 @@ body{
 	  from{box-shadow: inset -3px 0px 0px #888;}
 	  to{box-shadow: inset -3px 0px 0px transparent;}
 }
+#backgroundjs {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0
+}
 </style>
 
+<script src="/assets/js/jquery.particleground.min.js"></script>
+<script>
+    particleground(document.getElementById('backgroundjs'))
+</script>
     </div><footer class="absolute bottom-0 w-full h-auto p-4 shadow 
     flex items-center justify-center md:p-6 bg-background
     overflow-hidden left-0 pt-3">

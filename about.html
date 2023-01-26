@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
     <meta name="twitter:image" content="https://compromyse.xyz/assets/img/author.png">
     <meta property="og:image" content="https://compromyse.xyz/assets/img/author.png">
     <meta name="description" content="Hi there! I'm Raghuram Subramani. I love learning new techniques and programming languages. Outside of programming, I enjoy playing Soccer, Badminton and TableTennis.">
@@ -12,7 +12,7 @@
     <meta name="twitter:description" content="Hi there! I'm Raghuram Subramani. I love learning new techniques and programming languages. Outside of programming, I enjoy playing Soccer, Badminton and TableTennis.">
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>About | c0mpr0mys3</title>
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="About" />
 <meta name="author" content="c0mpr0mys3" />
 <meta property="og:locale" content="en_US" />
@@ -59,56 +59,39 @@
 
 			<a href="/models" class="ml-3 rounded font-mono px-2
       transition-all hover:bg-gray-800 pt-1 pb-0">/etc/models</a>
-  
-      <i class="fa fa-search ml-auto mr-5 rounded hover:bg-gray-800
-                px-2 pt-2" style="cursor: pointer;" onclick="openSearch();"></i>
     </div>
 </nav>
 
-<div id="myOverlay" class="overlay">
-  <div class="relative flex flex-col top-1/4 w-4/5
-              mt-8 m-auto">
-      <input type="text" id="search-input" placeholder="Search.." name="search"
-        class="search-bar">
-    <ul id="results-container" class="text-white text-xl overflow-auto
-                                      pb-4 h-96"></ul>
-  </div>
+<div id="mySidenav" class="sidenav bg-background font-mono">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/blog">Blog</a>
+  <a href="/about">About</a>
+  <a href="/ctf">CTF</a>
+  <a href="/models">Models</a>
 </div>
 
+<nav class="bg-background navbar md:hidden flex 
+            relative w-full flex-row items-center 
+            justify-start py-4 text-gray-500 shadow-lg">
+    
+    <div class="ml-2 flex flex-grow flex-row">
+      <a href="/" class="ml-2 rounded font-mono text-xl
+      text-white transition-all px-2 pt-1 pb-0
+      hover:bg-gray-700">~/compromyse</a>
+  
+    <button class="fa fa-bars mr-5 rounded ml-auto
+                        px-2 pt-2" style="cursor: pointer;" onclick="openNav()"></button>
+    </div>
+</nav>
+
 <script>
-// Open the full screen search box
-function openSearch() {
-  document.getElementById("myOverlay").style.display = "block";
-}
-
-// Close the full screen search box
-function closeSearch() {
-  document.getElementById("myOverlay").style.display = "none";
-}
-
 function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("mySidenav").style.width = "200px";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
-</script>
-
-<script src="/assets/js/search-script.js" type="text/javascript"></script>
-
-<script>
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '/search.json'
-  })
-
-  document.addEventListener('keyup', function(event) {
-    if ( event.keyCode == 27 ) {
-      closeSearch()
-    }
-  })
 </script>
 
 <style>
@@ -123,7 +106,6 @@ body {
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: #0f0e12;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -151,28 +133,6 @@ body {
   .sidenav a {font-size: 18px;}
 }
 </style>
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="/blog">Blog</a>
-  <a href="/about">About</a>
-  <a href="/ctf">CTF</a>
-  <a href="/models">Models</a>
-</div>
-
-<nav class="bg-background navbar md:hidden flex 
-            relative w-full flex-row items-center 
-            justify-start py-4 text-gray-500 shadow-lg">
-    
-    <div class="ml-2 flex flex-grow flex-row">
-      <a href="/" class="ml-2 rounded font-mono text-xl
-      text-white transition-all px-2 pt-1 pb-0
-      hover:bg-gray-700">~/compromyse</a>
-  
-    <button class="fa fa-bars mr-5 rounded ml-auto
-                        px-2 pt-2" style="cursor: pointer;" onclick="openNav()"></button>
-    </div>
-</nav>
 </div>
     <div class="mb-12">
     <div class="flex flex-row items-start flex-wrap pb-12">
@@ -207,7 +167,7 @@ body {
         <a class="text-xl text-white mt-2 border-b pb-1 h-auto">About</a>
         <a class="text-base text-white mt-2 pb-1 h-auto">
 		Hi there, I’m Raghuram. I’m a student living in Bangalore, India. I am a fan of hacking and programming. I’m also interested in deep learning, soccer and basketball.<br>
-            ~ I run Ubuntu, with forensic tools installed ofcourse, on my host system <br>
+            ~ I run Ubuntu, with forensic tools installed of course, on my host system <br>
             ~ Python is my preffered language. I'd say I'm pretty fluent in it. <br>
             ~ Comptia Fundamentals+ <br>
             ~ I love Samy Kamkar! <br>
@@ -216,13 +176,13 @@ body {
     <div class="blog-block flex-col break-words transform justify-start rounded max-w-xl" style="cursor: pointer;">
         <a class="text-xl text-white mt-2 border-b pb-1 h-auto max-w-xl">The first chapter</a>
         <a class="text-base text-white mt-2 pb-1 h-auto">
-            I started my journey by learning about Android, rooting and custom ROMS. Around ~2016 I started learning Linux with a Raspberry Pi 3B. It began with trying out things like wine and emulation. One of the things I wanted to do was running x86 programs on the RaspberryPI, which is ARM. This made me learn about CPU architectures. This project helped me learn a lot about Linux, which in retrospect, is useful. I started exploring hacking early on, in ~2017. I used Android tablets and phones, with termux and Custom ROMS on them. This helped me learn a lot about how Android APKs work and how Android works in general. Later on, in ~2020 I explored photo, video and audio editing. I also learned a little about 3D modeling. Through it all, my curiosity kept me going.
+            I started my journey by learning about Android, rooting and custom ROMS. Around late ~2016 I started learning Linux with a Raspberry Pi 3B. It began with trying out things like wine and emulation. One of the things I wanted to do was running x86 programs on the RaspberryPI, which is ARM. This made me learn about CPU architectures. This project helped me learn a lot about Linux, which in retrospect, is useful. I started exploring hacking, in early ~2018. I used Android tablets and phones, with termux and Custom ROMS on them. This helped me learn a lot about how Android APKs work and how Android works in general. Later on, in ~2020 I explored photo, video and audio editing. I also learned a little about 3D modeling. Through it all, my curiosity kept me going.
         </a>
     </div>
     <div class="blog-block flex-col break-words transform justify-start rounded max-w-lg" style="cursor: pointer;">
         <a class="text-xl text-white mt-2 border-b pb-1 h-auto">Skills</a>
         <a class="text-base text-datesearch mt-2 pb-1 h-auto">Python, C, HTML, CSS, Shell, Assembly</a>
-        <a class="text-base text-datesearch mt-2 pb-1 h-auto">Linux, Git, Hacking, Gimp, Arduino</a>
+        <a class="text-base text-datesearch mt-2 pb-1 h-auto">Linux, Windows, Git, CyberSecurity, TensorFlow, PyTorch</a>
     </div>
 </div>
 

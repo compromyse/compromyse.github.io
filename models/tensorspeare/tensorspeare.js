@@ -30,5 +30,4 @@ async function runModel(num_generate) {
 	idx2char = ['\n', ' ', '!', '$', '&', "'", ',', '-', '.', '3', ':', ';', '?', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 	const model = await tf.loadLayersModel('/models/tensorspeare/jsmodel/model.json');
 	generate_text(model, idx2char, char2idx, btn, generated_text, num_generate=num_generate);
-	btn.textContent = "Generate"
 }

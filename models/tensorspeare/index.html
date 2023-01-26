@@ -4,16 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
     <meta name="twitter:image" content="https://compromyse.xyz/assets/img/author.png">
     <meta property="og:image" content="https://compromyse.xyz/assets/img/author.png">
     <meta name="description" content="Hi there! I'm Raghuram Subramani. I love learning new techniques and programming languages. Outside of programming, I enjoy playing Soccer, Badminton and TableTennis.">
     <meta property="og:description" content="Hi there! I'm Raghuram Subramani. I love learning new techniques and programming languages. Outside of programming, I enjoy playing Soccer, Badminton and TableTennis.">
     <meta name="twitter:description" content="Hi there! I'm Raghuram Subramani. I love learning new techniques and programming languages. Outside of programming, I enjoy playing Soccer, Badminton and TableTennis.">
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Models | c0mpr0mys3</title>
-<meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Models" />
+<title>TensorSpeare | c0mpr0mys3</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="TensorSpeare" />
 <meta name="author" content="c0mpr0mys3" />
 <meta property="og:locale" content="en_US" />
 <link rel="canonical" href="/models/tensorspeare/" />
@@ -21,9 +21,9 @@
 <meta property="og:site_name" content="c0mpr0mys3" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Models" />
+<meta property="twitter:title" content="TensorSpeare" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"c0mpr0mys3"},"headline":"Models","url":"/models/tensorspeare/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"c0mpr0mys3"},"headline":"TensorSpeare","url":"/models/tensorspeare/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -59,56 +59,39 @@
 
 			<a href="/models" class="ml-3 rounded font-mono px-2
       transition-all hover:bg-gray-800 pt-1 pb-0">/etc/models</a>
-  
-      <i class="fa fa-search ml-auto mr-5 rounded hover:bg-gray-800
-                px-2 pt-2" style="cursor: pointer;" onclick="openSearch();"></i>
     </div>
 </nav>
 
-<div id="myOverlay" class="overlay">
-  <div class="relative flex flex-col top-1/4 w-4/5
-              mt-8 m-auto">
-      <input type="text" id="search-input" placeholder="Search.." name="search"
-        class="search-bar">
-    <ul id="results-container" class="text-white text-xl overflow-auto
-                                      pb-4 h-96"></ul>
-  </div>
+<div id="mySidenav" class="sidenav bg-background font-mono">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/blog">Blog</a>
+  <a href="/about">About</a>
+  <a href="/ctf">CTF</a>
+  <a href="/models">Models</a>
 </div>
 
+<nav class="bg-background navbar md:hidden flex 
+            relative w-full flex-row items-center 
+            justify-start py-4 text-gray-500 shadow-lg">
+    
+    <div class="ml-2 flex flex-grow flex-row">
+      <a href="/" class="ml-2 rounded font-mono text-xl
+      text-white transition-all px-2 pt-1 pb-0
+      hover:bg-gray-700">~/compromyse</a>
+  
+    <button class="fa fa-bars mr-5 rounded ml-auto
+                        px-2 pt-2" style="cursor: pointer;" onclick="openNav()"></button>
+    </div>
+</nav>
+
 <script>
-// Open the full screen search box
-function openSearch() {
-  document.getElementById("myOverlay").style.display = "block";
-}
-
-// Close the full screen search box
-function closeSearch() {
-  document.getElementById("myOverlay").style.display = "none";
-}
-
 function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("mySidenav").style.width = "200px";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
-</script>
-
-<script src="/assets/js/search-script.js" type="text/javascript"></script>
-
-<script>
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '/search.json'
-  })
-
-  document.addEventListener('keyup', function(event) {
-    if ( event.keyCode == 27 ) {
-      closeSearch()
-    }
-  })
 </script>
 
 <style>
@@ -123,7 +106,6 @@ body {
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: #0f0e12;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -151,36 +133,39 @@ body {
   .sidenav a {font-size: 18px;}
 }
 </style>
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="/blog">Blog</a>
-  <a href="/about">About</a>
-  <a href="/ctf">CTF</a>
-  <a href="/models">Models</a>
-</div>
-
-<nav class="bg-background navbar md:hidden flex 
-            relative w-full flex-row items-center 
-            justify-start py-4 text-gray-500 shadow-lg">
-    
-    <div class="ml-2 flex flex-grow flex-row">
-      <a href="/" class="ml-2 rounded font-mono text-xl
-      text-white transition-all px-2 pt-1 pb-0
-      hover:bg-gray-700">~/compromyse</a>
-  
-    <button class="fa fa-bars mr-5 rounded ml-auto
-                        px-2 pt-2" style="cursor: pointer;" onclick="openNav()"></button>
-    </div>
-</nav>
 </div>
     <div class="mb-12">
-    <script src="/assets/js/tf.min.js"></script>
+    <div class="prose md:prose-lg lg:prose-xl prose-invert mx-auto items-center prose-pink pb-12 pt-7 items-center justify-center">
+  <h3 id="tensorspeare">TensorSpeare</h3>
+
+<p>A TensorFlow model that tries to imitate Shakespeare.</p>
+
+<h3 id="layers">Layers</h3>
+
+<ol>
+  <li>
+    <p>Embedding</p>
+  </li>
+  <li>
+    <p>Gated Recurrent Unit</p>
+  </li>
+  <li>
+    <p>Dense</p>
+  </li>
+</ol>
+
+<h3 id="try-it">Try It</h3>
+
+<script src="/assets/js/tf.min.js"></script>
+
 <script src="tensorspeare.js"></script>
 
-<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100vw; max-height: 100vh; gap: 10px; padding-top: 10px">
-	<button id="mybutton" class="button" style="color: #fff; background-color: #6a6980; border: none; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;" onclick="runModel();">Generate</button>
-	<textarea readonly id="generated_text" rows="10" style="width: 55%; min-width: 400px; background-color: #1f1d29; resize:none; color: #FFFFFF; outline: none"></textarea>
+<div class="flex flex-col justify-left items-left">
+<textarea readonly="" id="generated_text" rows="10" style="min-width: 400px; background-color: #1f1d29; resize:none; color: #FFFFFF; outline: none"></textarea>
+&nbsp;
+<button id="mybutton" class="button" style="color: #fff; background-color: #6a6980; border: none; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;" onclick="runModel()">Generate</button>
+</div>
+
 </div>
 
     </div><footer class="absolute bottom-0 w-full h-auto p-4 shadow 

@@ -12,21 +12,21 @@
     <meta name="twitter:description" content="Hi there! I'm Raghuram Subramani. I love learning new techniques and programming languages. Outside of programming, I enjoy playing Soccer, Badminton and TableTennis.">
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>NahamCon CTF 2022 &gt; LOLD | c0mpr0mys3</title>
-<meta name="generator" content="Jekyll v4.3.2" />
+<meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="NahamCon CTF 2022 &gt; LOLD" />
 <meta name="author" content="c0mpr0mys3" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Writeup For The LOLD Challenge In NahamCon CTF 2022" />
 <meta property="og:description" content="Writeup For The LOLD Challenge In NahamCon CTF 2022" />
-<link rel="canonical" href="/blog/2022/nahamcon-lold" />
-<meta property="og:url" content="/blog/2022/nahamcon-lold" />
+<link rel="canonical" href="http://localhost:4000/blog/2022/nahamcon-lold" />
+<meta property="og:url" content="http://localhost:4000/blog/2022/nahamcon-lold" />
 <meta property="og:site_name" content="c0mpr0mys3" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-05-01T00:00:00+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="NahamCon CTF 2022 &gt; LOLD" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"c0mpr0mys3"},"dateModified":"2022-05-01T00:00:00+05:30","datePublished":"2022-05-01T00:00:00+05:30","description":"Writeup For The LOLD Challenge In NahamCon CTF 2022","headline":"NahamCon CTF 2022 &gt; LOLD","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2022/nahamcon-lold"},"url":"/blog/2022/nahamcon-lold"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"c0mpr0mys3"},"dateModified":"2022-05-01T00:00:00+05:30","datePublished":"2022-05-01T00:00:00+05:30","description":"Writeup For The LOLD Challenge In NahamCon CTF 2022","headline":"NahamCon CTF 2022 &gt; LOLD","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2022/nahamcon-lold"},"url":"http://localhost:4000/blog/2022/nahamcon-lold"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -60,8 +60,8 @@
       <a href="/ctf" class="ml-3 rounded font-mono px-2
       transition-all hover:bg-gray-800 pt-1 pb-0">/bin/ctf</a>
 
-			<a href="/models" class="ml-3 rounded font-mono px-2
-      transition-all hover:bg-gray-800 pt-1 pb-0">/etc/models</a>
+			<a href="/projects" class="ml-3 rounded font-mono px-2
+      transition-all hover:bg-gray-800 pt-1 pb-0">/etc/projects</a>
     </div>
 </nav>
 
@@ -70,7 +70,7 @@
   <a href="/blog">Blog</a>
   <a href="/about">About</a>
   <a href="/ctf">CTF</a>
-  <a href="/models">Models</a>
+  <a href="/projects">Projects</a>
 </div>
 
 <nav class="bg-background navbar md:hidden flex 
@@ -171,11 +171,11 @@ body {
 <p>Searching for “LOLPython” in your favorite search engine reveals <a href="http://www.dalkescientific.com/writings/diary/archive/2007/06/01/lolpython.html">this</a> webpage. “LOLPython is a Python macro”. LOLPython was written using python<strong>2</strong>, it’s old don’t judge him.</p>
 
 <p>A hello world in LOLPython would be</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">VISIBLE</span> <span class="s">'hello world'</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">VISIBLE</span> <span class="sh">'</span><span class="s">hello world</span><span class="sh">'</span>
 </code></pre></div></div>
 
 <p>And the python2 equivalent would be</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span> <span class="s">'hello world'</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span> <span class="sh">'</span><span class="s">hello world</span><span class="sh">'</span>
 </code></pre></div></div>
 
 <p>In the challenge <code class="language-plaintext highlighter-rouge">Attachments</code> There is a <code class="language-plaintext highlighter-rouge">lolpython.py</code> file which does the conversion and execution. To run <code class="language-plaintext highlighter-rouge">lolpython.py</code> you need python2 and python2 pip. Install them and run <code class="language-plaintext highlighter-rouge">python2 -m pip install ply</code>.</p>
@@ -193,10 +193,10 @@ body {
 <p>Now rather than doing <code class="language-plaintext highlighter-rouge">echo command | python2 lolpython.py</code>, we can make a <code class="language-plaintext highlighter-rouge">solve.py</code> that prints the commands.</p>
 
 <p>An example would be</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"""
-VISIBLE 'hello world'
-VISIBLE 'second command'
-"""</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="sh">"""</span><span class="s">
+VISIBLE </span><span class="sh">'</span><span class="s">hello world</span><span class="sh">'</span><span class="s">
+VISIBLE </span><span class="sh">'</span><span class="s">second command</span><span class="sh">'</span><span class="s">
+</span><span class="sh">"""</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>So to run the script we would do <code class="language-plaintext highlighter-rouge">python3 solve.py | python2 lolpython.py</code> This pipes the output of <code class="language-plaintext highlighter-rouge">solve.py</code> to <code class="language-plaintext highlighter-rouge">lolpython.py</code>.</p>
@@ -204,8 +204,8 @@ VISIBLE 'second command'
 <h3 id="the-plan">The Plan</h3>
 
 <p>So we know the flag is at <code class="language-plaintext highlighter-rouge">/flag.txt</code> and we need some way to read it. Python has a module named <code class="language-plaintext highlighter-rouge">os</code> which can run commands on the system. The code to read <code class="language-plaintext highlighter-rouge">/flag.txt</code> in python2 would be</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
-<span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="s">'cat /flag.txt'</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
+<span class="n">os</span><span class="p">.</span><span class="nf">system</span><span class="p">(</span><span class="sh">'</span><span class="s">cat /flag.txt</span><span class="sh">'</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Here, <code class="language-plaintext highlighter-rouge">os</code> is the module and <code class="language-plaintext highlighter-rouge">os.system('command')</code> executes the command that’s passed to it. Here the command is <code class="language-plaintext highlighter-rouge">cat /flag.txt</code>. <code class="language-plaintext highlighter-rouge">cat</code>, in Linux prints the content of the file that’s passed to it, in this case <code class="language-plaintext highlighter-rouge">/flag.txt</code>.</p>
@@ -219,10 +219,10 @@ VISIBLE 'second command'
 <p>Looking at the examples, we do <code class="language-plaintext highlighter-rouge">function WIT 'argument'!</code> to run a function command. In this case, <code class="language-plaintext highlighter-rouge">system WIT 'cat /flag.txt'!</code> will be equal to <code class="language-plaintext highlighter-rouge">system('cat /flag.txt')</code>.</p>
 
 <p>Putting all of this together, the final solve.py script would be</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"""
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="sh">"""</span><span class="s">
 IN MAI os GIMME system
-system WIT 'cat /flag.txt'!
-"""</span><span class="p">)</span>
+system WIT </span><span class="sh">'</span><span class="s">cat /flag.txt</span><span class="sh">'</span><span class="s">!
+</span><span class="sh">"""</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Running <code class="language-plaintext highlighter-rouge">python3 solve.py | nc host port</code> will result in the host printing the flag.</p>
